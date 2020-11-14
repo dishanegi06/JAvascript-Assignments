@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment2 q1</title>
+</head>
+<body>
+    <h2>Q. Make a function called composedValue that takes two functions f1 and f2 and a value and returns
+        f1(f2(value)), i.e., the first function called on the result of the second function called on the value.</h2>
+    <form>
+        <label for="value">Enter your number</label><br><br>
+        <input type="number" id="value" name="value"><br><br>
+        <input type="submit" value="Result" onclick="composedValue(square,double,document.getElementById('value').value);return false">
+    </form>
+
+    <script>
+
+         function square(n)
+         {
+            return n*n;
+         }
+         function double(n)
+         {
+            return n*2;
+         }
+       
+        function composedValue(square, double, n)
+        {
+          alert("The square and doubled value of the number is: "+square(double(n)));
+        }
+        
+      
+            </script>
+    
+</body>
+</html>

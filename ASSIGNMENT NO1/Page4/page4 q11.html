@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Page4 qll</title>
+   
+    
+    </head>
+    <body>
+       <h2>Q. Write a function that returns the largest element in a list. </h2>
+       
+       <script>
+var myArray=[1,23,45,0,56,6,96];
+function largestElement(){
+    var largest=0;
+    for(i=0;i<myArray.length;i++)
+    {
+        if(myArray[i]>largest){
+            largest= myArray[i];
+        }
+        else{
+            largest=largest;
+        }
+       
+    }
+    return largest;
+}
+console.log(`The largest element in [${myArray}] is : `+largestElement(myArray)); 
+</script>
+</body>
+
+</html>

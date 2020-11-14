@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment2 q2</title>
+</head>
+<body>
+    <h2>Q. Make
+        a function called “map” that takes an array and a function, and returns a new array that is the result
+        of calling the function on each element of the input array. Don’t use map, filter, or reduce.
+        </h2>
+    <form>
+        <label for="value">Enter your Array</label><br><br>
+        <input type="text" id="ip" ><br><br>
+        <input type="button" id="result" value="Results" onclick="takeInput()"><br><br>
+        <p>Results of Squaring</p>
+        <textarea id="square" rows="10" cols="60"></textarea><br><br>
+        <p>Results of SquareRoot</p>
+        <textarea id="squareRoot" rows="10" cols="60"></textarea><br><br>
+     
+    </form>
+
+    <script>
+ function takeInput()
+ {
+  var m=document.getElementById('ip').value;
+      function square(n)
+      {
+          return n*n;
+      }
+      function squareRoot(n)
+      {
+          return Math.sqrt(n);
+      }
+
+      function map(m,toDo)
+      {
+          var n=m.split(',');
+          var final=[];
+          
+          for(i=0;i<=n.length-1;i++)
+          {
+                final.push(toDo(n[i]));
+          }
+         return final;
+      }
+ 
+ document.getElementById('square').innerHTML="Square of all the elements in an array :" +map(document.getElementById('ip').value, square);
+ 
+ document.getElementById('squareRoot').innerHTML="SquareRoot of all the elements in an array  :" +map(document.getElementById('ip').value, squareRoot);
+ 
+   }  </script>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment2 q6</title>
+</head>
+<body>
+    <h2>Q. Make a “pure” recursive version of map. Hint: remember the slice and concat methods of arrays.</h2>
+        <br><br>
+   <form>
+    <p>Results of Squaring</p>
+    <textarea id="square" rows="10" cols="60"></textarea><br><br>
+    <p>Results of SquareRoot</p>
+    <textarea id="squareRoot" rows="10" cols="60"></textarea><br><br>
+ 
+   </form>
+    <script>
+        
+        var l=0;
+        var len=0;
+
+
+        function map(a, square){
+            if(l < a.length) {
+                b.push(square(a[l]));
+                ++l;
+                return map(a,square);
+            }
+            else {
+                return b;
+            }
+        }
+        
+        function square(x){
+            return x*x;
+        }
+        
+        function map1(c, Root) {
+            if(len <c.length) {
+                d.push(squareRoot(c[len]));
+                ++len;
+                return map1(c, squareRoot)
+            }
+            else {
+                return d;
+            }
+        }
+        
+        function squareRoot(x){
+            return (Math.sqrt(x));
+        }
+
+        var a = [1,3,6,9];
+        var b = new Array();
+
+        var c=[2,3,6,9];
+        var d = new Array();
+
+document.getElementById('square').innerHTML="Square of all the elements in an array :" +map(a, square);
+ 
+ document.getElementById('squareRoot').innerHTML="SquareRoot of all the elements in an array  :" +map1(c, squareRoot);
+
+ 
+    
+   document.write();
+
+   </script>
+    
+</body>
+</html>

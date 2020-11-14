@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+      <script>
+          var Savings= function (accountNumber,accountHolderName,accountBalance, isSalary){
+              this.accountNumber= accountNumber;
+              this.accountHolderName= accountHolderName;
+              this.accountBalance =accountBalance;
+              this.isSalary= isSalary;
+          }
+        Savings.prototype.withdraw= function(amount){
+            newSavingBalance= this.accountBalance - amount;
+            console.log("Your new balnce is " +newSavingBalance);
+            if(newSavingBalance <= 0)
+            {
+
+                console.log("You have insufficient balance!");
+            }
+        }
+        var Ben = new Savings(3256,"Ben", 9000,6000);
+        Ben.withdraw(2000);
+        console.log(Ben);
+
+              var Current= function(accountNumber,accountHolderName,accountBalance, odLimit){
+              this.accountNumber= accountNumber;
+              this.accountHolderName= accountHolderName;
+              this.accountBalance =accountBalance;
+              this.odLimit= odLimit;
+              }
+              Current.prototype.withdraw= function(amount){
+            newCurrentBalance= this.accountBalance - amount;
+            console.log("Your new balnce is " +newCurrentBalance);
+            if(newCurrentBalance <= 0){
+                console.log("You have insufficient funds!");
+            }
+        }
+        var Clark = new Current(3256,"Clark", 8000,6000);
+        Clark.withdraw(3000);
+        console.log(Clark);
+      </script>  
+    </body>
+</html>

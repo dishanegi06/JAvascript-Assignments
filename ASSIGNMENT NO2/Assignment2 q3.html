@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment2 q2</title>
+</head>
+<body>
+    <h2>Q. Make a function called “find” that takes an array and a test function, and returns the first element of
+        the array that “passes” (returns non-false for) the test. Don’t use map, filter, or reduce.</h2>
+    <form>
+        <label for="value">Enter your Array</label><br><br>
+        <input type="text" id="ip" ><br><br>
+        <input type="button" id="result" value="Result" onclick="find(document.getElementById('ip').value,isEven);return false">
+    
+    </form>
+
+    <script>
+ function isEven(n)
+ {
+     return (n%2==0);
+ }
+
+ function find(m,isEven)
+ {
+     var n=m.split(",");
+     for(i=0;i<=n.length-1;i++)
+     {
+         if(isEven(n[i]))
+         {
+             alert("Hey you have one even number in your array   :" +n[i]);
+             break;
+         }
+         else{
+             alert("No even number is present in your array till now");
+         }
+
+     }
+ }
+      
+    </script>
+    
+</body>
+</html>

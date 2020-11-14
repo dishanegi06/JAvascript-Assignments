@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Assignment3 q2</title>
+    
+    
+    </head>
+    <body>
+        <h3>adding area method </h3>
+        <script>
+
+   class Rectangle
+   {
+    constructor(width,height){
+        this.width=width;
+        this.height=height;
+    }
+   }
+var rec1=new Rectangle(4,5);
+document.write("Created a new Object:- "+rec1.width+" is the width & "+rec1.height+"is the height. ");
+
+Rectangle.prototype.getArea=function(){
+    return this.width*this.height;
+}
+
+document.write("The area of the object created is: "+rec1.getArea());
+
+        </script>
+    </body>
+
+</html>

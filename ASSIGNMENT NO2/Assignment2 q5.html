@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment2 q2</title>
+</head>
+<body>
+    <h2>Q.Make a “pure” recursive version of find. That is, don’t use any explicit loops (e.g. for loops or the
+        forEach method), and don’t use any local variables (e.g., var x = ...) inside the functions. Hint:
+        remember the slice method of arrays.</h2>
+        <br><br>
+   <form>
+       <label for="ip">Enter your array</label><br><br>
+       <input type="text" id="input" ><br><br>
+        <input type="button" id="result" value="Results" onclick="takeInputs()"><br><br>
+        <p>Results of isEven function using recursion</p>
+        <textarea id="square" rows="10" cols="60"></textarea><br><br>
+   </form>
+    <script>
+        function takeInputs()
+        {
+       var m=document.getElementById('input').value;
+        
+         function isEven(n)
+         {
+          return n%2==0;
+         }
+        var pointer=0;
+         function find(m,isEven)
+         {
+             if(pointer < m.length)
+             {
+             if(isEven(m[pointer]))
+             {
+               return m[pointer];
+              
+             }
+           else{
+               ++pointer;
+               return find(m,isEven);
+           }
+         }
+         }
+         document.getElementById('square').innerHTML="The first even number in your array is :"+find(m,isEven);
+        
+        }
+   </script>
+    
+</body>
+</html>

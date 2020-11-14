@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Basic Js</title>
+    
+    
+    </head>
+    <body>
+        <h2>Q.  Write a function that rotates a list by k elements.</h2>
+
+        <script>
+    var myArray=[1,2,3,4,5,6,7];
+    console.log("before");
+    console.log(myArray);
+    var n;
+    Array.prototype.rotateIt = function( n ) {
+    this.unshift.apply( this, this.splice( n, this.length ) );
+    return this;
+  }
+  console.log("after");
+  console.log(myArray.rotateIt(4));
+ 
+   </script>
+        </body>
+        </html>

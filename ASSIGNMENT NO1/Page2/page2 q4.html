@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Page2 Q4</title>
+    
+    
+    </head>
+    <body>
+       <h2>Q.Write a function that, given a string, will return the longest token (consecutive string of characters)
+        that contains neither an a nor a b.</h2>
+        <script>
+          function longestToken(x){
+    var a="";
+  
+    for ( i = 0; i <x.length; i++) {
+  
+      if(x[i]!='a' && x[i]!='b'){
+  
+          for (j = i+1; j < x.length; j++) {
+  
+            if(x[j]!='a' && x[j]!='b'){
+              continue;
+            }
+            else{
+              if(a.length<(x.substr(i,j-i).length)){
+                a=x.substr(i,j-i);
+              }
+              i=j+1;
+              break;
+            }
+          }
+  
+          }
+          else{
+            i+=1;
+      }
+    }
+    console.log(a);
+  }
+  console.log(`The longest token in "ababcdababefgababhiab" is :`);
+  longestToken("ababcdababefgababhiab");
+        </script>
+    </body>
+
+</html>
+
+  

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Page1 q4</title>
+    
+    
+    </head>
+    <body>
+        <p> Q.Make a function that takes a number of flips and returns the fraction that were heads.
+
+        </p>
+        <script>
+
+   function headsRatio(c)
+   {
+    var num,h=0;
+    
+      for (var i = 0; i < c; i++)
+       {
+        num=Math.ceil(Math.random() *10);
+    
+        if(num<6)
+        {
+          h=Math.random();
+        }
+    
+    }
+    console.log("The number of times heads occur is : "+h);
+    }
+    headsRatio(100);
+    </script>
+    </body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calci</title>
+  </head>
+  <body>
+      <h1>CalCi</h1>
+      <h3>Menu for reference</h3>
+      <ol>
+          <li>Add</li>
+          <li>Subtract</li>
+          <li>Multiply</li>
+          <li>Divide</li>
+          <li>Exponent</li>
+          <li>Mean</li>
+          <li>Quit</li>
+
+      </ol>
+      <input type="button"  value="Run" onclick="run()">
+    <div id="answer">
+        <textarea id="msg" name="user_message" rows="10" cols="50">
+        </textarea>
+
+    </div>
+
+    <script>
+function run(){
+
+var choice=prompt("1. Add 2. Subtract 3. Multiply 4. Divide 5. Exponent 6. Mean 7. Quit");
+if(choice>=1 && choice<=7){
+  
+      if(choice==1){
+        var n1=prompt("Enter first number");
+        var n2=prompt("Enter second number");
+        if(!isNaN(n1) && !isNaN(n2))
+        {
+        document.getElementById("msg").innerHTML+=`Addition of ${n1} and ${n2} is: `+parseInt(Number(n1)+Number(n2));
+
+        var pause=setTimeout(run,5000);
+        }
+        else{
+          alert("Not a number");
+        }
+
+      }
+     else if(choice==2)
+      {
+          var n1=prompt("Enter first number");
+          var n2=prompt("Enter second number");
+          if(!isNaN(n1) && !isNaN(n2))
+          {
+              document.getElementById("msg").innerHTML+=`Subtraction of ${n1} and ${n2} is: `+parseInt(Number(n1) - Number(n2));
+              var pause=setTimeout(run,5000);
+          }
+          else{
+            alert("Not a number");
+          }
+      }
+     else if(choice==3)
+      {
+          var n1=prompt("Enter first number");
+          var n2=prompt("Enter second number");
+          if(!isNaN(n1) && !isNaN(n2))
+          {
+              document.getElementById("msg").innerHTML+=`Multiplication of ${n1} and ${n2} is: `+parseInt(Number(n1) * Number(n2));
+              var pause=setTimeout(run,5000);
+          }
+          else{
+            alert("Not a number");
+          }
+      }
+     else if(choice==4)
+      {
+          var n1=prompt("Enter first number");
+          var n2=prompt("Enter second number");
+          if(!isNaN(n1) && !isNaN(n2))
+          {
+              document.getElementById("msg").innerHTML+=`Division of ${n1} and ${n2} is: `+parseInt(Number(n1) / Number(n2));
+              var pause=setTimeout(run,5000);
+          }
+          else{
+            alert("Not a number");
+          }
+      }
+      else if(choice==5)
+      {
+          var n1=prompt("Enter number");
+          var n2=prompt("Enter the base");
+          if(!isNaN(n1) && !isNaN(n2))
+          {
+              document.getElementById("msg").innerHTML+=`Exponent of ${n1} and ${n2} is: `+(Math.pow(Number(n1),Number(n2)));
+              var pause=setTimeout(run,5000);
+          }
+          else{
+            alert("Not a number");
+          }
+      }
+      else if(choice==6){
+        var num=prompt("Enter series of numbers:");
+        var res = num.substring(num.length - 3, num.length);
+        var n = num.indexOf("*");
+        console.log(n);
+        var sum=0;
+        if(res==="*")
+        {
+          for (var i = 0; i < n; i++) {
+            var result=num.split("",n);
+
+
+          }
+          for(var i=0;i<result.length;i++){
+                 sum+=Number(result[i]);
+             }
+          console.log(result);
+          document.getElementById("msg").innerHTML+="Mean is: "+parseInt(sum/n);
+          var pause=setTimeout(run,5000);
+        }
+
+        else
+        {
+          alert("Series not ended");
+        }
+
+      }
+else{
+    run();
+}
+      
+
+    }
+   
+        else{
+      alert("Enter number between 1 to 7");
+    
+    }
+    
+}
+
+    </script>
+  </body>
+</html>

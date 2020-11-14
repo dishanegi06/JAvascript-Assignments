@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Table</title>
+  </head>
+
+  <body>
+    <style>
+
+        table {
+             border-collapse: collapse;
+     }
+         table tr td{
+     border:1px solid black
+    }
+ </style>
+  <h1>Table Creation by taking inputs for rows and columns</h1>
+
+<br><br>
+
+  <table id="createTable">
+      
+</table>
+<input type="button" onclick="draw()" value="Make your own table">
+     <script>
+         function draw(){
+             var rows=prompt("Enter the number of rows required",1);
+             var columns=prompt("Enter the number of columns required");
+
+             for(i=0;i<parseInt(rows,10);i++)
+             {
+                 var r=document.getElementById("createTable").insertRow(i);
+
+                 for(j=0;j<parseInt(columns,10);j++)
+                 {
+                       var c=r.insertCell(j);
+                       c.innerHTML="#"+i+j;
+                 }
+             }
+
+            
+        }
+           
+         
+
+     </script>
+    
+  
+  </body>
+
+</html>

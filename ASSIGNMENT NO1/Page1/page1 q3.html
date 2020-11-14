@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Page1 q3</title>
+    
+    
+    </head>
+    <body>
+        <p> Q.Make a function that, given a number, flips a coin that many times and returns the number of heads.
+        </p>
+        <script>
+
+   function numHeads(c)
+   {
+    var num,h=0;
+    
+      for (var i = 0; i < c; i++)
+       {
+        num=Math.ceil(Math.random() *10);
+    
+        if(num<6)
+        {
+          h++;
+        }
+    
+    }
+    console.log("The number of times heads occur is : "+h);
+    }
+    numHeads(10);
+    </script>
+    </body>
+
+</html>

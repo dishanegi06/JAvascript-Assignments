@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fahrenheit To Celcius</title>
+  </head>
+
+  <body>
+
+    <h2>Enter the temperature in Fahrenheit</h2><input type="number" id="ftemp" name="fTemp"><br>
+    <br>
+    <input type="button"  value="Show Results" onclick="check()">
+    <br>
+    <br>
+    <div id="result"> 
+        <textarea id="msg" name="user_message" rows="10" cols="50" placeholder="Enter Text Here">
+
+        </textarea>
+        <br>
+        <br>
+        <p>Above is the converted temperature in degree celcious</p>
+    </div>
+
+    <script>
+        function check() {
+        var input=document.getElementById("ftemp").value;
+        if(input=="null")
+        {
+            alert("Please fill a number");
+        }
+        else{
+            var convertedTemp=(input-32)*(5/9);
+            document.getElementById("msg").innerHTML="Temperature  : "+convertedTemp;
+        }
+        }
+    
+    
+    </script>
+  </body>
+
+</html>

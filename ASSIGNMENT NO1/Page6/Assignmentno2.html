@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Astrick Design</title>
+  </head>
+
+  <body>
+      <h1>Play With Patterns!!</h1>
+      <input type="button" id="first" value="Play" onclick="patterns()"><br><br><br><br>
+     <div id="pattern1">
+         <p>1.Pattern</p>
+    </div>
+    <br><br><br>
+    <div id="pattern2">
+        <p>2.Pattern</p>
+        </div>
+        
+    <br><br><br>
+        <div id="pattern3">
+            <p>3.Pattern</p>
+            </div>
+
+    <script>
+        function patterns(){
+            var first=prompt("Enter the number for pattern 1");
+            if(first>0 && first<=30)
+            {
+                var second=prompt("Enter the number for pattern 2");
+                if(second>0 && second<=30)
+                {
+                    var third=prompt("Enter the number for pattern 3");
+                    if(third>0 && third<=30)
+                    {
+                        for(i=1;i<=first;i++)
+                        {
+                            document.getElementById("pattern1").innerHTML+="*";
+                        }
+                        for(i=1;i<=second;i++)
+                        {
+                            document.getElementById("pattern2").innerHTML+="*";
+                        }
+                        for(i=1;i<=third;i++)
+                        {
+                            document.getElementById("pattern3").innerHTML+="*";
+                        }
+
+                    }
+                    else{
+                        alert("Number entered not in the specified range");
+                    }
+                }
+                else{
+                        alert("Number entered not in the specified range");
+                    }
+            }
+            else{
+                        alert("Number entered not in the specified range");
+                    }
+        }
+    
+    </script>
+  </body>
+
+</html>

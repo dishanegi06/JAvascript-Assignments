@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment2 q2</title>
+</head>
+<body>
+    <h2>Q. Make a function called compose that takes two functions f1 and f2 and returns a new function that,
+        when called on a value, will return f1(f2(value)). Assume that f1 and f2 each take exactly one argument.</h2>
+    <form>
+        <label for="value">Enter your number</label><br><br>
+        <input type="number" id="ip" ><br><br>
+        <input type="button" id="result" value="Results" onclick="compose(Square,Double,document.getElementById('ip').value);return false">
+    
+    </form>
+
+    <script>
+   function Square(n)
+   {
+       return n*n;
+   }
+   function Double(n)
+   {
+       return 2*n;
+   }
+   function compose(Square, Double,n)
+   {
+     alert("Square and then double "+Double(Square(n)));
+     alert("Double and then Square "+Square(Double(n)));
+   }
+      
+    </script>
+    
+</body>
+</html>
